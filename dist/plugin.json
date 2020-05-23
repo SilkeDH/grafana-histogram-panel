@@ -1,0 +1,36 @@
+{
+  "type": "panel",
+  "name": "Histogram ",
+  "id": "kit-histogram",
+  "info": {
+    "description": "A simple histogram plugin for Grafana.",
+    "author": {
+      "name": "Silke Donayre",
+      "url": ""
+    },
+    "keywords": [
+      "histogram"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/simple-react-panel"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2020-05-23"
+  },
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
