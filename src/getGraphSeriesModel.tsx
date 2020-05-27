@@ -30,6 +30,9 @@ export const getGraphSeriesModel = (
   fieldOptions?: FieldConfigSource
 ) => {
   const graphs: GraphSeriesXY[] = [];
+  
+  console.log(dataFrames);
+  console.log(dataFrames.length);
 
   const displayProcessor = getDisplayProcessor({
     field: {
@@ -43,6 +46,7 @@ export const getGraphSeriesModel = (
 
   let fieldColumnIndex = -1;
   for (const series of dataFrames) {
+    console.log(series)
     const { timeField } = getTimeField(series);
 
     if (!timeField) {
@@ -50,6 +54,7 @@ export const getGraphSeriesModel = (
     }
 
     for (const field of series.fields) {
+      console.log(field)
       if (field.type !== FieldType.number) {
         continue;
       }

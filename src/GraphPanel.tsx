@@ -25,7 +25,6 @@ export const GraphPanel: React.FunctionComponent<GraphPanelProps> = ({
       </div>
     );
   }
-
   const {
     graph: { showLines, showBars, showPoints },
     legend: legendOptions,

@@ -23,8 +23,8 @@ export interface Options {
 
 export const defaults: Options = {
   graph: {
-    showBars: false,
-    showLines: true,
+    showBars: true,
+    showLines: false,
     showPoints: false,
   },
   legend: {

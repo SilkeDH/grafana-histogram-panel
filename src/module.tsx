@@ -10,13 +10,13 @@ export const plugin = new PanelPlugin<Options>(GraphPanel)
         path: 'graph.showBars',
         name: 'Show bars',
         description: '',
-        defaultValue: false,
+        defaultValue: true,
       })
       .addBooleanSwitch({
         path: 'graph.showLines',
         name: 'Show lines',
         description: '',
-        defaultValue: true,
+        defaultValue: false,
       })
       .addBooleanSwitch({
         path: 'graph.showPoints',
