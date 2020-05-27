@@ -1,8 +1,9 @@
 import React from 'react';
-import { Chart, Graph } from '@grafana/ui';
+import { Chart, GraphWithLegend } from '@grafana/ui';
 import { PanelProps } from '@grafana/data';
 import { Options } from './types';
 import { GraphPanelController } from './GraphPanelController';
+import { LegendDisplayMode } from '@grafana/ui';
 
 interface GraphPanelProps extends PanelProps<Options> {}
 
@@ -49,18 +50,23 @@ export const GraphPanel: React.FunctionComponent<GraphPanelProps> = ({
     >
       {({ onSeriesToggle, onHorizontalRegionSelected, ...controllerApi }) => {
         return (
-          <Graph
+          <GraphWithLegend
             timeRange={timeRange}
             timeZone={timeZone}
             width={width}
             height={height}
+            displayMode={asTable ? LegendDisplayMode.Table : LegendDisplayMode.List}
+            isLegendVisible={isVisible}
+            sortLegendBy={legendOptions.sortBy}
+            sortLegendDesc={legendOptions.sortDesc}
+            onSeriesToggle={onSeriesToggle}
             onHorizontalRegionSelected={onHorizontalRegionSelected}
             {...graphProps}
             {...legendProps}
             {...controllerApi}
           >
             <Chart.Tooltip mode={tooltipOptions.mode} />
-          </Graph>
+          </GraphWithLegend>
         );
       }}
     </GraphPanelController>

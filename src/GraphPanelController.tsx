@@ -1,6 +1,7 @@
 import React from 'react';
 import { GraphSeriesToggler } from '@grafana/ui';
 import { PanelData, GraphSeriesXY, AbsoluteTimeRange, TimeZone, FieldConfigSource } from '@grafana/data';
+
 import { getGraphSeriesModel } from './getGraphSeriesModel';
 import { Options, SeriesOptions } from './types';
 import { SeriesColorChangeHandler, SeriesAxisToggleHandler } from '@grafana/ui/components/Graph/GraphWithLegend';
