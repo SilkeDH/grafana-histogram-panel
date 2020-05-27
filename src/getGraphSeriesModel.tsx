@@ -68,6 +68,7 @@ export const getGraphSeriesModel = (
         nullValueMode: NullValueMode.Null,
       });
 
+      console.log(points);
       if (points.length > 0) {
         const seriesStats = reduceField({ field, reducers: legendOptions.stats || [] });
         let statsDisplayValues: DisplayValue[] = [];
@@ -125,9 +126,10 @@ export const getGraphSeriesModel = (
             },
           },
         });
-
+        console.log(timeField);
+        console.log(field);
         graphs.push({
-          label: field.name,
+          label: String(series.name),
           data: points,
           color: field.config.color?.fixedColor,
           info: statsDisplayValues,
